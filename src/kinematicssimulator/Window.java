@@ -6,9 +6,9 @@
 package kinematicssimulator;
 
 import java.awt.Color;
+import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
-import javax.swing.UIManager;
 
 /**
  *
@@ -16,7 +16,9 @@ import javax.swing.UIManager;
  */
 class Window extends JPanel{
     
-    
+    private Window() {
+        
+    }
     
     public Window(JFrame f){
             
@@ -28,13 +30,20 @@ class Window extends JPanel{
         f.setSize(1000, 600);
         f.setVisible(true);
         
-        //setup the GUI
-        createGUI(f);
-    }
-    
-    public void createGUI(JFrame f){
         //set the background color
         Color BackgroundColor = new Color(131, 222, 87);
         f.getContentPane().setBackground(BackgroundColor);
+        
+        //f.add(new Window());
+        
+    }
+    
+    public void paintComponent(Graphics g){
+        
+        super.paintComponent(g);
+        
+        g.setColor(Color.BLACK);
+        g.drawRect(1, 1, 200, 200);
+        
     }
 }
