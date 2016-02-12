@@ -5,17 +5,22 @@
  */
 package kinematicssimulator;
 
+import javax.swing.JFrame;
+
 /**
  *
  * @author gabe
  */
 public class KinematicsSimulator {
 
+    //Instance setup
+    private static JFrame f;
+    
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Window w = new Window();
+        Window w = new Window(f);
     }
     
 }

@@ -5,6 +5,7 @@
  */
 package kinematicssimulator;
 
+import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.UIManager;
@@ -14,16 +15,26 @@ import javax.swing.UIManager;
  * @author gabe
  */
 class Window extends JPanel{
-    public Window(){
+    
+    
+    
+    public Window(JFrame f){
             
-
-        JFrame f = new JFrame("KinematicsSimulator");
+        //set up the frame
+        f = new JFrame("KinematicsSimulator");
         f.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         f.setLocationByPlatform(true);
         f.pack();
         f.setSize(1000, 600);
         f.setVisible(true);
-            
         
+        //setup the GUI
+        createGUI(f);
+    }
+    
+    public void createGUI(JFrame f){
+        //set the background color
+        Color BackgroundColor = new Color(131, 222, 87);
+        f.getContentPane().setBackground(BackgroundColor);
     }
 }
